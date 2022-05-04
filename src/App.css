@@ -28,7 +28,7 @@ input[type="text"] {
   caret-color: red;
   border-left: 1px solid grey;
   border-radius: 8px 0 0 8px;
-  padding: 5px 7px;
+  padding: 5px 7px;  
 }
 #search {
   border-radius: 0 8px 8px 0;
@@ -50,7 +50,7 @@ input[type="text"] {
   margin: 0.5rem 0.5rem;
   cursor: pointer;
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 410px) {
   #search{
     width: 18rem;
     border: 1px solid grey;
@@ -63,7 +63,6 @@ input[type="text"] {
     border: 1px solid grey;
     border-radius: 8px 8px 0 0 ;
   }
-
 }
 #dust{
   
