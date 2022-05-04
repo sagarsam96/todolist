@@ -24,7 +24,20 @@ transition: transform ease 0.5s;
 :hover{
     transform: translateY(10px) translateX(-40px); scale(1.1);
     z-index: 500;
-    color:rgb(33, 85, 205);   
+    color:rgb(33, 85, 205);
+    background: #79DAE8;
+}
+:nth-of-type(2n) {
+  :hover{
+    background: #FEE2C5;
+    color: #EB5353;
+  }
+}
+:nth-of-type(4n) {
+  :hover{
+    background: #B9F8D3;
+    color:#006E7F;
+  }
 }
 `;
 const Content = Styled.div`
