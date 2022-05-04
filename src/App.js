@@ -18,11 +18,12 @@ const App = () => {
 
   const updateDataBase = () => {
     if (input.trim().length > 0) {
+      
       setDataBase([
         ...dataBase,
         {
           id: ID++,
-          text: input,
+          text: input.substring(0,20),
           status: false,
           time: new Date().toTimeString()
         }

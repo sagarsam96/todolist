@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Styled from "styled-components";
+import Dustbin from '../assets/dustbin.png'
 
 const Card = Styled.div`
 display: flex;
@@ -14,12 +15,16 @@ box-shadow:
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
   12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  100px 100px 80px rgba(0, 0, 0, 0.07)
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05)
 ;
+
+overflow: hidden;
+z-index:1;
 transition: transform ease 0.5s;
 :hover{
-    transform: translateY(10px) translateX(-40px);
+    transform: translateY(10px) translateX(-40px); scale(1.1);
+    z-index: 500;
+    color:rgb(33, 85, 205);   
 }
 `;
 const Content = Styled.div`
@@ -47,7 +52,10 @@ const ListCard = ({ x, index, deleteHandler }) => {
             <li style={{ textDecoration: "line-through" }}>{x.text}</li>
           )}
         </Content>
-        <button id="del" onClick={() => deleteHandler(index)}>Delete</button>
+        <button id="del" onClick={() => deleteHandler(index)}>
+          <img src={Dustbin} alt="dustbin" 
+          style={{width: "60%"}}/>
+        </button>
       </Card>
     </>
   );
