@@ -34,6 +34,7 @@ const App = () => {
   };
 
   const deleteHandler = (id) => {
+    
     const updateDataBaseAgain = dataBase.filter((x, index) => index !== id);
     setDataBase(updateDataBaseAgain);
   };

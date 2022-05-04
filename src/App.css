@@ -65,3 +65,12 @@ input[type="text"] {
   }
 
 }
+#dust{
+  
+  transition: transform ease 0.4s;
+}
+#dust:hover{
+  transform: rotateY(900deg);
+
+  transition: transform ease 2s;
+}

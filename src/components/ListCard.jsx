@@ -53,7 +53,7 @@ const ListCard = ({ x, index, deleteHandler }) => {
           )}
         </Content>
         <button id="del" onClick={() => deleteHandler(index)}>
-          <img src={Dustbin} alt="dustbin" 
+          <img src={Dustbin} alt="dustbin" id="dust"
           style={{width: "60%"}}/>
         </button>
       </Card>
