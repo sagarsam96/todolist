@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ListCard from "./components/ListCard";
 import "./App.css";
 
@@ -14,6 +14,14 @@ const initial = [
 const App = () => {
   const [input, setInput] = useState("");
   const [dataBase, setDataBase] = useState(initial);
+  
+  const useFocus = () => {
+    const htmlElRef = useRef(null)
+    const setFocus = () => {htmlElRef.current &&  htmlElRef.current.focus()}
+
+    return [ htmlElRef, setFocus ] 
+}
+  const[inputRef, setInputFocus]= useFocus();
   let ID = 1;
 
   const updateDataBase = () => {
@@ -28,8 +36,8 @@ const App = () => {
           time: new Date().toTimeString()
         }
       ]);
-
       setInput("");
+      setInputFocus();
     }
   };
 
@@ -58,6 +66,8 @@ const App = () => {
             <input
               placeholder="plan is.."
               type="text"
+              autoFocus
+              ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />

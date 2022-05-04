@@ -70,7 +70,11 @@ const ListCard = ({ x, index, deleteHandler }) => {
           />
           {!isChecked && <li>{x.text}</li>}
           {isChecked && (
-            <li style={{ textDecoration: "line-through" }}>{x.text}</li>
+            <li 
+            style={
+              { 
+              filter: "blur(0.1rem)"
+            }}>{x.text}</li>
           )}
         </Content>
         <button id="del" onClick={() => deleteHandler(index)}>
