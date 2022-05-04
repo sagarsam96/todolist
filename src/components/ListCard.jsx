@@ -39,11 +39,19 @@ transition: transform ease 0.5s;
     color:#006E7F;
   }
 }
+@media only screen and (max-width: 600px) {
+  :hover{
+    transform: translateY(10px) translateX(-10px); scale(1.02);
+    z-index: 500;
+    color:rgb(33, 85, 205);
+    background: #79DAE8;
+}
+}
 `;
 const Content = Styled.div`
 display: flex;
 gap: 10px;
-width: 100rem;
+max-width: 100rem;
 `;
 
 const ListCard = ({ x, index, deleteHandler }) => {
@@ -67,7 +75,7 @@ const ListCard = ({ x, index, deleteHandler }) => {
         </Content>
         <button id="del" onClick={() => deleteHandler(index)}>
           <img src={Dustbin} alt="dustbin" id="dust"
-          style={{width: "60%"}}/>
+          style={{maxWidth: "20px"}}/>
         </button>
       </Card>
     </>
